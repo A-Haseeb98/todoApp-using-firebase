@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo app</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body onload="getTodo()">
+    <h1>
+        TODO APP
+    </h1>
+    <div class="input-group p-3 mb-3">
+        <input type="text" id="task" onkeydown="enter(event)" class="form-control "
+            placeholder="What do you need to do?">
+        <button class="btn  btn-outline-dark " onclick="add()" id="add">Add</button>
+        <button class="btn  btn-outline-dark " onclick="deleteAll()" id="del">Delete All</button>
+    
+    </div>
+    <div id='main'>
+
+    </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyAJe--m5QyJVtFCqSJrgMUqQalHlBHOO2c",
+            authDomain: "assignment-1d119.firebaseapp.com",
+            databaseURL: "https://assignment-1d119.firebaseio.com",
+            projectId: "assignment-1d119",
+            storageBucket: "assignment-1d119.appspot.com",
+            messagingSenderId: "297123320748",
+            appId: "1:297123320748:web:6345cba2477d4d49e4a009"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
