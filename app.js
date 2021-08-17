@@ -4,10 +4,10 @@ const getTodo = () => {
     firebase.database().ref("todos").on("child_added", (data) => {
         console.log(data.val().todo)
         main.innerHTML += `
-        <div  id="del${data.key}" class="input-group p-3">
-        <input id="edit${data.key}" class="form-control bg-light"  value="${data.val().todo}" disabled="">
-        <button id="btn${data.key}" class="btn btn-outline-dark" onclick="edit('${data.key}')">Edit</button>
-        <button id="${data.key}" class="btn btn-outline-dark" onclick="del('${data.key}')">Delete</button>
+        <div  id="del${data.key}" class="input-group p-3 todo-list" >
+        <input id="edit${data.key}" class=" list-input form-control bg-light"  value="${data.val().todo}" disabled="">
+        <button id="btn${data.key}" class="button btn btn-outline-dark" onclick="edit('${data.key}')">Edit</button>
+        <button id="${data.key}" class="button btn btn-outline-dark" onclick="del('${data.key}')">Delete</button>
         </div>`
     })
 }
@@ -86,5 +86,4 @@ function enter(e) {
     if(e.keyCode === 13){
         add();
     }
-    console.log(e)
 }

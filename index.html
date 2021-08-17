@@ -20,16 +20,21 @@
     <h1>
         TODO APP
     </h1>
-    <div class="input-group p-3 mb-3">
-        <input type="text" id="task" onkeydown="enter(event)" class="form-control "
-            placeholder="What do you need to do?">
-        <button class="btn  btn-outline-dark " onclick="add()" id="add">Add</button>
-        <button class="btn  btn-outline-dark " onclick="deleteAll()" id="del">Delete All</button>
-    
-    </div>
-    <div id='main'>
+    <div class="container">
+        <div class="input-group p-3 mb-3">
+            <input type="text" id="task" onkeydown="enter(event)" class="form-control "
+                placeholder="What do you need to do?">
+            <button class="btn button  btn-outline-dark " onclick="add()" id="add">Add</button>
+            <button class="btn button btn-outline-dark " onclick="deleteAll()" id="del">Delete All</button>
 
+        
     </div>
+    
+        <div id='main'>
+
+        </div>
+    </div>
+
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
